@@ -9,11 +9,14 @@
   <meta name="description" content="Tarjeta digital de María Ortiz Uriarte. Asesora fiscal y contable. Tus impuestos en orden, sin sustos." />
   <meta name="theme-color" content="#F4F3EE" />
   
-  <!-- Open Graph -->
+  <!-- Open Graph / WhatsApp / Telegram Preview -->
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="María Ortiz Uriarte — Asesora Fiscal y Contable" />
   <meta property="og:description" content="Tus impuestos en orden, sin sustos. Contacta directamente o descarga mi contacto en tu agenda." />
   <meta property="og:url" content="https://ortizuriarteasesoria.es" />
+  <meta property="og:image" content="foto.jpg" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
 
   <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -178,18 +181,18 @@
     }
 
     /* ==========================================================================
-       AVATAR / MONOGRAMA CIRCULAR "MO"
+       AVATAR / FOTO OFICIAL DE MARÍA ORTIZ
        ========================================================================== */
     .avatar-wrapper {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 15px;
       margin-bottom: 20px;
     }
 
     .avatar-circle {
-      width: 74px;
-      height: 74px;
+      width: 82px;
+      height: 82px;
       border-radius: 50%;
       background: var(--clay-nude);
       border: 2px solid var(--ink-black);
@@ -199,31 +202,21 @@
       position: relative;
       flex-shrink: 0;
       box-shadow: 3px 3px 0px var(--ink-black);
+      overflow: hidden;
     }
 
-    .avatar-circle::after {
-      content: '';
-      position: absolute;
-      inset: 4px;
-      border-radius: 50%;
-      border: 1px dashed rgba(12, 12, 14, 0.35);
-    }
-
-    .avatar-text {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 900;
-      font-size: 1.95rem;
-      color: var(--ink-black);
-      letter-spacing: -0.05em;
-      position: relative;
-      z-index: 1;
-      transform: translateY(-1px);
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
     }
 
     .avatar-meta {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 3px;
       text-align: left;
     }
 
@@ -726,11 +719,8 @@
         gap: 12px;
       }
       .avatar-circle {
-        width: 64px;
-        height: 64px;
-      }
-      .avatar-text {
-        font-size: 1.7rem;
+        width: 70px;
+        height: 70px;
       }
       .hero-heading-block {
         margin-bottom: 14px;
@@ -826,10 +816,10 @@
         </button>
       </header>
 
-      <!-- Avatar con Monograma Circular "MO" (Estilo sello técnico de la referencia) -->
+      <!-- Avatar con Foto Oficial de María Ortiz -->
       <div class="avatar-wrapper">
-        <div class="avatar-circle" role="img" aria-label="Iniciales de María Ortiz">
-          <span class="avatar-text">MO</span>
+        <div class="avatar-circle">
+          <img src="foto.jpg" alt="Foto de perfil de María Ortiz Uriarte" class="avatar-img" />
         </div>
         <div class="avatar-meta">
           <span class="meta-tag">ASESORÍA OFICIAL</span>
