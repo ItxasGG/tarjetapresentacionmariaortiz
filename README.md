@@ -9,7 +9,7 @@ Tarjeta de presentación digital interactiva optimizada para dispositivos móvil
 - **Nombre**: María Ortiz Uriarte
 - **Cargo**: Asesora fiscal y contable
 - **Lema**: *“Tus impuestos en orden, sin sustos.”*
-- **Fotografía**: [foto.jpg](foto.jpg) — Retrato oficial en cápsula circular con contorno wireframe y verificación oficial.
+- **Fotografía**: [foto.jpg](foto.jpg) — Retrato oficial en cápsula circular con contorno wireframe y sello Asesoría Ortiz Uriarte.
 - **WhatsApp**: [+34 600 00 00 01](https://wa.me/34600000001)
 - **Teléfono**: [+34 600 00 00 01](tel:+34600000001)
 - **Email**: [maria@ortizuriarteasesoria.es](mailto:maria@ortizuriarteasesoria.es)
