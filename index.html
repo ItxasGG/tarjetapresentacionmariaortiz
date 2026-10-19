@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <title>María Ortiz Uriarte | Asesora Fiscal y Contable</title>
+  <meta name="description" content="Tarjeta de presentación digital de María Ortiz Uriarte. Asesora fiscal y contable. Tus impuestos en orden, sin sustos." />
+  <meta name="theme-color" content="#0B1320" />
+  
+  <!-- Open Graph / WhatsApp / LinkedIn Preview -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="María Ortiz Uriarte — Asesora Fiscal y Contable" />
+  <meta property="og:description" content="Tus impuestos en orden, sin sustos. Contacta directamente conmigo o guarda mis datos en tu agenda." />
+  <meta property="og:url" content="https://ortizuriarteasesoria.es" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y PALETA DE COLOR (ESTÉTICA EJECUTIVA Y DE CONFIANZA)
+       ========================================================================== */
+    :root {
+      --bg-dark: #080D17;
+      --card-bg: rgba(16, 24, 39, 0.82);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-highlight: rgba(255, 255, 255, 0.14);
+      
+      --accent-gold: #E5B869;
+      --accent-gold-gradient: linear-gradient(135deg, #E5B869 0%, #C89945 100%);
+      --accent-gold-glow: rgba(229, 184, 105, 0.28);
+      
+      --emerald-trust: #10B981;
+      --emerald-glow: rgba(16, 185, 129, 0.25);
+      
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --text-soft: #CBD5E1;
+      
+      --btn-bg: rgba(255, 255, 255, 0.04);
+      --btn-border: rgba(255, 255, 255, 0.07);
+      --btn-hover: rgba(255, 255, 255, 0.09);
+      
+      --whatsapp-color: #25D366;
+      --whatsapp-bg: rgba(37, 211, 102, 0.12);
+      --whatsapp-border: rgba(37, 211, 102, 0.3);
+      
+      --phone-color: #38BDF8;
+      --phone-bg: rgba(56, 189, 248, 0.12);
+      --phone-border: rgba(56, 189, 248, 0.3);
+      
+      --email-color: #A78BFA;
+      --email-bg: rgba(167, 139, 250, 0.12);
+      --email-border: rgba(167, 139, 250, 0.3);
+
+      --radius-xl: 28px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      
+      --transition-smooth: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* ==========================================================================
+       RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      min-height: 100%;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body {
+      padding: 24px 16px;
+      position: relative;
+    }
+
+    /* Fondo ambiental dinámico con halos suaves */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.45;
+      animation: floatOrb 12s ease-in-out infinite alternate;
+    }
+
+    .orb-1 {
+      top: -10%;
+      right: -10%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, #1E3A5F 0%, rgba(30, 58, 95, 0) 70%);
+    }
+
+    .orb-2 {
+      bottom: -15%;
+      left: -10%;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, #0F3229 0%, rgba(15, 50, 41, 0) 70%);
+      animation-delay: -6s;
+    }
+
+    .orb-3 {
+      top: 40%;
+      left: 20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #3D2B15 0%, rgba(61, 43, 21, 0) 70%);
+      opacity: 0.25;
+    }
+
+    @keyframes floatOrb {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(30px) scale(1.08); }
+    }
+
+    /* ==========================================================================
+       CONTENEDOR DE LA TARJETA DIGITAL
+       ========================================================================== */
+    .card-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .digital-card {
+      position: relative;
+      background: var(--card-bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--card-border);
+      border-top-color: var(--card-highlight);
+      border-radius: var(--radius-xl);
+      padding: 34px 24px 30px;
+      box-shadow: 
+        0 30px 60px -15px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(255, 255, 255, 0.03),
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Patrón de brillo superior en la tarjeta */
+    .card-glare {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(229, 184, 105, 0.6), transparent);
+    }
+
+    /* Barra superior con badge y botones de acción rápida */
+    .card-topbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #34D399;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--emerald-trust);
+      box-shadow: 0 0 10px var(--emerald-trust);
+      position: relative;
+    }
+
+    .status-dot::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: var(--emerald-trust);
+      opacity: 0.5;
+      animation: pulseDot 2s ease-out infinite;
+    }
+
+    @keyframes pulseDot {
+      0% { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+
+    .top-action-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--btn-border);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .top-action-btn:hover, .top-action-btn:active {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      transform: scale(1.06);
+    }
+
+    /* ==========================================================================
+       AVATAR / MONOGRAMA "MO"
+       ========================================================================== */
+    .avatar-container {
+      position: relative;
+      margin-bottom: 18px;
+    }
+
+    .avatar-ring {
+      width: 102px;
+      height: 102px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(229, 184, 105, 0.7) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(16, 185, 129, 0.5) 100%);
+      padding: 3px;
+      box-shadow: 
+        0 12px 28px -6px rgba(0, 0, 0, 0.6),
+        0 0 24px var(--accent-gold-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+
+    .avatar-ring:hover {
+      transform: scale(1.03);
+      box-shadow: 
+        0 16px 36px -6px rgba(0, 0, 0, 0.7),
+        0 0 32px var(--accent-gold-glow);
+    }
+
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #1E293B 0%, #0B1220 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .avatar-initials {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 2.35rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #FFFFFF 20%, #F5DEB3 70%, #E5B869 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      user-select: none;
+      transform: translateY(-1px);
+    }
+
+    .avatar-verified {
+      position: absolute;
+      bottom: 2px;
+      right: 4px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #0B1320;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--card-bg);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .avatar-verified svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--accent-gold);
+    }
+
+    /* ==========================================================================
+       INFORMACIÓN PERSONAL (NOMBRE, CARGO, FRASE)
+       ========================================================================== */
+    .profile-info {
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    .profile-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.62rem;
+      font-weight: 800;
+      line-height: 1.22;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .profile-role {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .profile-role-pill {
+      display: inline-block;
+      padding: 4px 14px;
+      background: rgba(229, 184, 105, 0.1);
+      border: 1px solid rgba(229, 184, 105, 0.22);
+      border-radius: 100px;
+    }
+
+    .profile-tagline {
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: var(--text-soft);
+      max-width: 320px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: var(--radius-md);
+      border: 1px dashed rgba(255, 255, 255, 0.09);
+    }
+
+    .profile-tagline span {
+      color: #FFFFFF;
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       FILA DE BOTONES DE CONTACTO DIRECTO (WHATSAPP, LLAMAR, EMAIL)
+       ========================================================================== */
+    .quick-actions-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 14px;
+    }
+
+    .action-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 8px 14px;
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .action-tile:active {
+      transform: scale(0.96);
+    }
+
+    /* Tile WhatsApp */
+    .tile-whatsapp {
+      background: var(--whatsapp-bg);
+      border: 1px solid var(--whatsapp-border);
+      color: var(--whatsapp-color);
+    }
+    .tile-whatsapp:hover {
+      background: rgba(37, 211, 102, 0.2);
+      box-shadow: 0 8px 20px -4px rgba(37, 211, 102, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Tile Llamar */
+    .tile-phone {
+      background: var(--phone-bg);
+      border: 1px solid var(--phone-border);
+      color: var(--phone-color);
+    }
+    .tile-phone:hover {
+      background: rgba(56, 189, 248, 0.2);
+      box-shadow: 0 8px 20px -4px rgba(56, 189, 248, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Tile Email */
+    .tile-email {
+      background: var(--email-bg);
+      border: 1px solid var(--email-border);
+      color: var(--email-color);
+    }
+    .tile-email:hover {
+      background: rgba(167, 139, 250, 0.2);
+      box-shadow: 0 8px 20px -4px rgba(167, 139, 250, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .action-icon {
+      width: 28px;
+      height: 28px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .action-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: currentColor;
+    }
+
+    .action-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+    }
+
+    .action-sub {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       BOTÓN PRINCIPAL: GUARDAR CONTACTO (vCard .vcf)
+       ========================================================================== */
+    .cta-vcard-btn {
+      width: 100%;
+      background: var(--accent-gold-gradient);
+      color: #0A0F1A;
+      border: none;
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      box-shadow: 
+        0 10px 25px -4px var(--accent-gold-glow),
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .cta-vcard-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+      transform: skewX(-20deg);
+      animation: buttonShine 4s infinite;
+    }
+
+    @keyframes buttonShine {
+      0% { left: -100%; }
+      35%, 100% { left: 160%; }
+    }
+
+    .cta-vcard-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 
+        0 14px 30px -4px rgba(229, 184, 105, 0.45),
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.6);
+    }
+
+    .cta-vcard-btn:active {
+      transform: translateY(1px) scale(0.98);
+    }
+
+    .cta-vcard-btn svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* ==========================================================================
+       LISTA DE ENLACES SECUNDARIOS (WEB, LINKEDIN, INSTAGRAM)
+       ========================================================================== */
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 20px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 16px;
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--text-main);
+      transition: var(--transition-smooth);
+    }
+
+    .link-item:hover {
+      background: var(--btn-hover);
+      border-color: rgba(255, 255, 255, 0.16);
+      transform: translateX(3px);
+    }
+
+    .link-item:active {
+      transform: scale(0.98);
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .link-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .box-web {
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(14, 165, 233, 0.25);
+      color: #38BDF8;
+    }
+
+    .box-linkedin {
+      background: rgba(10, 102, 194, 0.15);
+      border: 1px solid rgba(10, 102, 194, 0.3);
+      color: #0A66C2;
+    }
+
+    .box-instagram {
+      background: rgba(225, 48, 108, 0.12);
+      border: 1px solid rgba(225, 48, 108, 0.28);
+      color: #E1306C;
+    }
+
+    .link-icon-box svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .link-content {
+      text-align: left;
+    }
+
+    .link-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.25;
+    }
+
+    .link-url {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.2;
+    }
+
+    .link-arrow {
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      transition: var(--transition-smooth);
+    }
+
+    .link-item:hover .link-arrow {
+      color: #FFFFFF;
+      transform: translateX(2px);
+    }
+
+    .link-arrow svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ==========================================================================
+       PIE DE TARJETA (COMPARTIR & QR CODE)
+       ========================================================================== */
+    .card-footer {
+      width: 100%;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .footer-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-sm);
+      color: var(--text-soft);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      user-select: none;
+    }
+
+    .footer-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+    }
+
+    .footer-btn:active {
+      transform: scale(0.97);
+    }
+
+    .footer-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ==========================================================================
+       MODAL DE CÓDIGO QR
+       ========================================================================== */
+    .qr-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 7, 13, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .qr-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .qr-dialog {
+      background: #111A29;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      max-width: 320px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      position: relative;
+    }
+
+    .qr-modal.active .qr-dialog {
+      transform: scale(1);
+    }
+
+    .qr-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: #CBD5E1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .qr-close-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+    }
+
+    .qr-box {
+      background: #FFFFFF;
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      margin: 18px auto 16px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .qr-box canvas, .qr-box img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .qr-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 4px;
+    }
+
+    .qr-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       NOTIFICACIÓN TOAST FLOTANTE
+       ========================================================================== */
+    .toast-feedback {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #10B981;
+      color: #032115;
+      padding: 12px 22px;
+      border-radius: 100px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+      z-index: 200;
+      opacity: 0;
+      transition: all 0.35s cubic-bezier(0.2, 0.9, 0.2, 1.1);
+      pointer-events: none;
+    }
+
+    .toast-feedback.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .toast-feedback svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* ==========================================================================
+       OPTIMIZACIÓN PARA PANTALLAS COMPACTAS (AJUSTE UNA SOLA PANTALLA)
+       ========================================================================== */
+    @media (max-height: 800px) {
+      body {
+        padding: 12px 10px;
+      }
+      .digital-card {
+        padding: 22px 18px 18px;
+      }
+      .card-topbar {
+        margin-bottom: 14px;
+      }
+      .avatar-container {
+        margin-bottom: 12px;
+      }
+      .avatar-ring {
+        width: 88px;
+        height: 88px;
+      }
+      .avatar-initials {
+        font-size: 2rem;
+      }
+      .profile-info {
+        margin-bottom: 16px;
+      }
+      .profile-name {
+        font-size: 1.45rem;
+        margin-bottom: 4px;
+      }
+      .profile-role {
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+      }
+      .profile-tagline {
+        font-size: 0.86rem;
+        padding: 8px 14px;
+      }
+      .quick-actions-row {
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .action-tile {
+        padding: 12px 6px 10px;
+      }
+      .action-icon {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 6px;
+      }
+      .action-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+      .cta-vcard-btn {
+        padding: 13px 18px;
+        font-size: 0.94rem;
+        margin-bottom: 14px;
+      }
+      .links-list {
+        gap: 7px;
+        margin-bottom: 14px;
+      }
+      .link-item {
+        padding: 10px 14px;
+      }
+      .link-icon-box {
+        width: 32px;
+        height: 32px;
+      }
+      .link-icon-box svg {
+        width: 18px;
+        height: 18px;
+      }
+      .card-footer {
+        padding-top: 12px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      body {
+        padding: 10px 8px;
+      }
+      .digital-card {
+        padding: 20px 14px 16px;
+      }
+      .profile-name {
+        font-size: 1.35rem;
+      }
+      .action-tile {
+        padding: 10px 4px 8px;
+      }
+      .action-label {
+        font-size: 0.72rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo ambiental con efectos luminosos -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <main class="card-wrapper">
+    <article class="digital-card">
+      <div class="card-glare" aria-hidden="true"></div>
+
+      <!-- Barra superior de estado y acciones -->
+      <header class="card-topbar">
+        <div class="status-badge" title="Disponible para asesoramiento fiscal y contable">
+          <span class="status-dot"></span>
+          <span>Disponible</span>
+        </div>
+        <button class="top-action-btn" id="btnShareTop" title="Compartir tarjeta" aria-label="Compartir enlace">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/>
+          </svg>
+        </button>
+      </header>
+
+      <!-- Avatar con Monograma "MO" -->
+      <div class="avatar-container">
+        <div class="avatar-ring" role="img" aria-label="Iniciales de María Ortiz">
+          <div class="avatar-inner">
+            <span class="avatar-initials">MO</span>
+          </div>
+        </div>
+        <div class="avatar-verified" title="Perfil verificado">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Nombre, Cargo y Lema descriptivo -->
+      <section class="profile-info">
+        <h1 class="profile-name">María Ortiz Uriarte</h1>
+        <div class="profile-role">
+          <span class="profile-role-pill">Asesora fiscal y contable</span>
+        </div>
+        <p class="profile-tagline">
+          “<span>Tus impuestos en orden, sin sustos.</span>”
+        </p>
+      </section>
+
+      <!-- Fila de 3 Botones Grandes de Contacto Inmediato -->
+      <nav class="quick-actions-row" aria-label="Contacto directo">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/34600000001?text=Hola%20Mar%C3%ADa,%20he%20visto%20tu%20tarjeta%20digital%20y%20me%20gustar%C3%ADa%20hacerte%20una%20consulta." 
+           class="action-tile tile-whatsapp" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           id="btnWhatsApp"
+           aria-label="Abrir chat de WhatsApp con María Ortiz">
+          <div class="action-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.23-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.25-8.22 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1 1.49-.07 1.47-.61 1.68-.86.21-.25.21-.47.15-.53-.06-.06-.23-.12-.48-.24z"/>
+            </svg>
+          </div>
+          <span class="action-label">WhatsApp</span>
+          <span class="action-sub">Chat directo</span>
+        </a>
+
+        <!-- Llamar -->
+        <a href="tel:+34600000001" 
+           class="action-tile tile-phone"
+           id="btnCall"
+           aria-label="Llamar por teléfono a María Ortiz">
+          <div class="action-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/>
+            </svg>
+          </div>
+          <span class="action-label">Llamar</span>
+          <span class="action-sub">Teléfono</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:maria@ortizuriarteasesoria.es?subject=Consulta%20Asesor%C3%ADa%20Fiscal" 
+           class="action-tile tile-email"
+           id="btnEmail"
+           aria-label="Enviar correo electrónico a María Ortiz">
+          <div class="action-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <span class="action-label">Email</span>
+          <span class="action-sub">Escribir</span>
+        </a>
+      </nav>
+
+      <!-- Botón Destacado: Guardar Contacto (vCard .vcf) -->
+      <button class="cta-vcard-btn" id="btnSaveContact" aria-label="Guardar a María Ortiz en mis contactos">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 13v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6H3l9-9 9 9h-4zm-7-5.17L7.83 12H10v6h4v-6h2.17L12 7.83zM12 2a5 5 0 0 1 5 5v1h-2V7a3 3 0 0 0-6 0v1H7V7a5 5 0 0 1 5-5z" style="display:none;"/>
+          <path d="M12 16l4-4h-3V3h-2v9H8l4 4zm9 4H3v-2h18v2z"/>
+        </svg>
+        <span>Guardar contacto</span>
+      </button>
+
+      <!-- Enlaces y Perfiles Profesionales -->
+      <div class="links-list" role="list">
+        <!-- Sitio Web Oficial -->
+        <a href="https://ortizuriarteasesoria.es" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="link-item"
+           id="linkWeb"
+           role="listitem">
+          <div class="link-left">
+            <div class="link-icon-box box-web">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <div class="link-content">
+              <div class="link-title">Sitio web oficial</div>
+              <div class="link-url">ortizuriarteasesoria.es</div>
+            </div>
+          </div>
+          <div class="link-arrow">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/mariaortizuriarte" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="link-item"
+           id="linkLinkedin"
+           role="listitem">
+          <div class="link-left">
+            <div class="link-icon-box box-linkedin">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+            </div>
+            <div class="link-content">
+              <div class="link-title">LinkedIn</div>
+              <div class="link-url">linkedin.com/in/mariaortizuriarte</div>
+            </div>
+          </div>
+          <div class="link-arrow">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/ortizuriarte.asesoria" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="link-item"
+           id="linkInstagram"
+           role="listitem">
+          <div class="link-left">
+            <div class="link-icon-box box-instagram">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div class="link-content">
+              <div class="link-title">Instagram</div>
+              <div class="link-url">@ortizuriarte.asesoria</div>
+            </div>
+          </div>
+          <div class="link-arrow">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- Pie con Herramientas de Compartir y QR -->
+      <footer class="card-footer">
+        <button class="footer-btn" id="btnOpenQR" aria-label="Mostrar código QR">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-3 2h3v3h-3v-3zm3 3h3v3h-3v-3zm-5-3h2v5h-2v-5zm2 5h3v2h-3v-2z"/>
+          </svg>
+          <span>Mostrar QR</span>
+        </button>
+
+        <button class="footer-btn" id="btnShareCard" aria-label="Compartir tarjeta digital">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 5l-1.42 1.42-1.59-1.59V16h-1.98V4.83L9.42 6.42 8 5l4-4 4 4zm4 5v11c0 1.1-.9 2-2 2H6c-1.11 0-2-.9-2-2V10c0-1.11.89-2 2-2h3v2H6v11h12V10h-3V8h3c1.1 0 2 .89 2 2z"/>
+          </svg>
+          <span>Compartir</span>
+        </button>
+      </footer>
+    </article>
+  </main>
+
+  <!-- Modal para Visualización del Código QR -->
+  <div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrModalTitle">
+    <div class="qr-dialog">
+      <button class="qr-close-btn" id="btnCloseQR" aria-label="Cerrar modal de código QR">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+      <h2 class="qr-title" id="qrModalTitle">Escanea mi tarjeta</h2>
+      <p class="qr-desc">Apunta con la cámara de tu móvil para abrir y guardar este contacto al instante.</p>
+      
+      <div class="qr-box">
+        <img id="qrImage" alt="Código QR de la tarjeta digital de María Ortiz Uriarte" src="" />
+      </div>
+
+      <button class="footer-btn" id="btnCopyLink" style="width: 100%;">
+        <svg viewBox="0 0 24 24">
+          <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+        </svg>
+        <span>Copiar enlace directo</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast flotante de confirmación -->
+  <aside class="toast-feedback" id="toastMessage" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24">
+      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+    </svg>
+    <span id="toastText">¡Contacto guardado con éxito!</span>
+  </aside>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: GENERACIÓN vCard (.vcf), QR, COMPARTIR Y FEEDBACK
+       ========================================================================== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // 1. Datos oficiales de la tarjeta
+      const CONTACT_DATA = {
+        firstName: 'María',
+        lastName: 'Ortiz Uriarte',
+        formattedName: 'María Ortiz Uriarte',
+        title: 'Asesora fiscal y contable',
+        organization: 'Ortiz Uriarte Asesoría',
+        phone: '+34600000001',
+        email: 'maria@ortizuriarteasesoria.es',
+        website: 'https://ortizuriarteasesoria.es',
+        instagram: 'https://instagram.com/ortizuriarte.asesoria',
+        linkedin: 'https://linkedin.com/in/mariaortizuriarte',
+        note: 'Tus impuestos en orden, sin sustos.'
+      };
+
+      // 2. Elementos del DOM
+      const btnSaveContact = document.getElementById('btnSaveContact');
+      const btnShareTop = document.getElementById('btnShareTop');
+      const btnShareCard = document.getElementById('btnShareCard');
+      const btnOpenQR = document.getElementById('btnOpenQR');
+      const btnCloseQR = document.getElementById('btnCloseQR');
+      const btnCopyLink = document.getElementById('btnCopyLink');
+      const qrModal = document.getElementById('qrModal');
+      const qrImage = document.getElementById('qrImage');
+      const toastMessage = document.getElementById('toastMessage');
+      const toastText = document.getElementById('toastText');
+
+      // 3. Función para mostrar Toast Feedback
+      let toastTimer = null;
+      function showToast(message) {
+        if (toastTimer) clearTimeout(toastTimer);
+        toastText.textContent = message;
+        toastMessage.classList.add('show');
+        toastTimer = setTimeout(() => {
+          toastMessage.classList.remove('show');
+        }, 2800);
+      }
+
+      // 4. Generación y descarga directa del archivo vCard (.vcf)
+      function downloadVCard() {
+        const vCardContent = [
+          'BEGIN:VCARD',
+          'VERSION:3.0',
+          `FN;CHARSET=UTF-8:${CONTACT_DATA.formattedName}`,
+          `N;CHARSET=UTF-8:${CONTACT_DATA.lastName};${CONTACT_DATA.firstName};;;`,
+          `TITLE;CHARSET=UTF-8:${CONTACT_DATA.title}`,
+          `ORG;CHARSET=UTF-8:${CONTACT_DATA.organization}`,
+          `TEL;TYPE=CELL,VOICE:${CONTACT_DATA.phone}`,
+          `EMAIL;TYPE=WORK,INTERNET:${CONTACT_DATA.email}`,
+          `URL;TYPE=WORK:${CONTACT_DATA.website}`,
+          `X-SOCIALPROFILE;type=instagram:${CONTACT_DATA.instagram}`,
+          `X-SOCIALPROFILE;type=linkedin:${CONTACT_DATA.linkedin}`,
+          `NOTE;CHARSET=UTF-8:${CONTACT_DATA.note}`,
+          'END:VCARD'
+        ].join('\r\n');
+
+        const fileName = `${CONTACT_DATA.formattedName.replace(/\s+/g, '_')}.vcf`;
+
+        // Detección de iOS para apertura directa en Agenda de Contactos
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+        if (isIOS) {
+          // En iOS, abrir como data URI de vCard abre directamente la ficha de contactos
+          const uri = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vCardContent);
+          const link = document.createElement('a');
+          link.href = uri;
+          link.setAttribute('download', fileName);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else if (navigator.msSaveBlob) {
+          const blob = new Blob([vCardContent], { type: 'text/vcard;charset=utf-8;' });
+          navigator.msSaveBlob(blob, fileName);
+        } else {
+          const blob = new Blob([vCardContent], { type: 'text/vcard;charset=utf-8;' });
+          const link = document.createElement('a');
+          const url = URL.createObjectURL(blob);
+          link.href = url;
+          link.setAttribute('download', fileName);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => URL.revokeObjectURL(url), 2000);
+        }
+
+        showToast('¡Contacto listo para añadir a tu agenda!');
+      }
+
+      btnSaveContact.addEventListener('click', downloadVCard);
+
+      // 5. Función de Compartir (Web Share API con fallback al portapapeles)
+      async function shareCard() {
+        const shareData = {
+          title: `${CONTACT_DATA.formattedName} — ${CONTACT_DATA.title}`,
+          text: `${CONTACT_DATA.formattedName} | ${CONTACT_DATA.title} — "${CONTACT_DATA.note}"`,
+          url: window.location.href
+        };
+
+        if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+          try {
+            await navigator.share(shareData);
+          } catch (err) {
+            if (err.name !== 'AbortError') {
+              copyToClipboard(window.location.href);
+            }
+          }
+        } else {
+          copyToClipboard(window.location.href);
+        }
+      }
+
+      function copyToClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => {
+            showToast('¡Enlace copiado al portapapeles!');
+          }).catch(() => {
+            fallbackCopy(text);
+          });
+        } else {
+          fallbackCopy(text);
+        }
+      }
+
+      function fallbackCopy(text) {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+          document.execCommand('copy');
+          showToast('¡Enlace copiado al portapapeles!');
+        } catch (e) {
+          showToast('Enlace: ' + text);
+        }
+        document.body.removeChild(textArea);
+      }
+
+      btnShareTop.addEventListener('click', shareCard);
+      btnShareCard.addEventListener('click', shareCard);
+      btnCopyLink.addEventListener('click', () => copyToClipboard(window.location.href));
+
+      // 6. Generación del código QR en el Modal
+      function initQR() {
+        const currentUrl = encodeURIComponent(window.location.href);
+        // Usamos la API de generación de QR con alta resolución y corrección de errores M
+        qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${currentUrl}&margin=2&color=080D17`;
+      }
+
+      btnOpenQR.addEventListener('click', () => {
+        initQR();
+        qrModal.classList.add('active');
+      });
+
+      btnCloseQR.addEventListener('click', () => {
+        qrModal.classList.remove('active');
+      });
+
+      qrModal.addEventListener('click', (e) => {
+        if (e.target === qrModal) {
+          qrModal.classList.remove('active');
+        }
+      });
+
+      // Escape para cerrar modal
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && qrModal.classList.contains('active')) {
+          qrModal.classList.remove('active');
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>
