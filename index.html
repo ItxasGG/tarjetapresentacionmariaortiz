@@ -215,18 +215,19 @@
 
     .avatar-meta {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: left;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
     }
 
-    .meta-brand {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--ink-black);
-      letter-spacing: -0.02em;
-      line-height: 1.25;
+    .avatar-logo-img {
+      max-height: 64px;
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: left center;
+      display: block;
     }
 
     /* ==========================================================================
@@ -709,6 +710,10 @@
         width: 70px;
         height: 70px;
       }
+      .avatar-logo-img {
+        max-height: 54px;
+        max-width: 175px;
+      }
       .hero-heading-block {
         margin-bottom: 14px;
       }
@@ -803,13 +808,13 @@
         </button>
       </header>
 
-      <!-- Avatar con Foto Oficial de María Ortiz -->
+      <!-- Avatar con Foto Oficial y Logotipo Ortiz Uriarte Asesoría -->
       <div class="avatar-wrapper">
         <div class="avatar-circle">
           <img src="foto.jpg" alt="Foto de perfil de María Ortiz Uriarte" class="avatar-img" />
         </div>
         <div class="avatar-meta">
-          <span class="meta-brand">Asesoría Ortiz Uriarte</span>
+          <img src="logo.png" alt="Ortiz Uriarte Asesoría" class="avatar-logo-img" />
         </div>
       </div>
 
